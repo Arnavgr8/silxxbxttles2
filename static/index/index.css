@@ -143,8 +143,7 @@ body {
 
 /* General Footer Styling */
 footer {
-  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-  backdrop-filter: blur(1px); /* Creates the blurred background effect */
+  background: none;
   padding: 50px 20px;
   color: white;
   text-align: center;
@@ -315,8 +314,7 @@ nav ul li a{
 }
 
 .menu-icon, .bar{
-    display: none;
-  display: flex;
+  display: none;
   flex-direction: column;
   cursor:pointer;
 }
@@ -431,4 +429,103 @@ background: url('https://t4.ftcdn.net/jpg/05/49/86/39/360_F_549863991_6yPKI08MG7
     background: #ff4e4e;
     color: #fff;
     transform: scale(1.1);
+}
+
+/* Basic CSS styling for the grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;  /* Border around each section */
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+}
+
+/* Styling for the heading */
+.heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+/* Styling for the paragraph */
+.paragraph {
+  font-size: 16px;
+  color: #ffffff;
+}
+ /* Styling for the container of overlapping cards */
+ .cards-container {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  left: 10%;
+}
+
+/* Styling for individual cards */
+.card {
+  position: absolute;
+  width: 120px;
+  height: 160px;
+  text-align: center;
+  font-size: 26px;
+  color: #f0f0f0;
+  border: 2px solid #000;
+  border-radius: 8px;
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+ /* Offset each card slightly to create the overlapping effect */
+ .card:nth-child(1) {
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-image: url('https://i.pinimg.com/736x/3f/6f/3d/3f6f3d3f4c4f5e58707a44d162e8b837.jpg');
+  background-size: cover;
+}
+.card:nth-child(2) {
+  top: 20px;
+  left: 30px;
+  z-index: 2;
+  background-image: url('https://media.tenor.com/hIHA12COQZ8AAAAe/spider-man-comic-book.png');
+  background-size: cover;
+}
+.card:nth-child(3) {
+  top: 40px;
+  left: 60px;
+  z-index: 3;
+  background-image: url('https://i.pinimg.com/736x/fc/5f/4c/fc5f4c8ffd0440244ed9797efa5e0efa.jpg');
+  background-size: cover;
+}
+.card:nth-child(4) {
+  top: 60px;
+  left: 90px;
+  z-index: 4;
+  background-image: url('https://i.pinimg.com/736x/c0/73/83/c07383c0bb5320c0a02ad5d4899e223f.jpg');
+  background-size: cover;
+}
+.card:nth-child(5) {
+  top: 80px;
+  left: 120px;
+  z-index: 5;
+  background-image: url('https://i.pinimg.com/736x/5f/88/16/5f881645fe2925496952f0d048f6e9ff.jpg');
+  background-size: cover;
+}
+
+/* Hover effect to bring the hovered card to the top */
+.card:hover {
+  z-index: 10; /* Increase z-index to bring it to the top */
+  transform: scale(1.1); /* Optional: Slightly enlarge the card when hovered */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for emphasis */
 }
