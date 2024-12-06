@@ -1,0 +1,434 @@
+/* Snowy Background */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    background-size: cover;
+}
+
+/* Snowflake container */
+#snow-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.snowflake {
+    position: absolute;
+    top: -50px;
+    color: white;
+    font-size: 1em;
+    user-select: none;
+    animation-name: fall;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    opacity: 0.8;
+}
+
+/* Snowflake Animation */
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0.3;
+    }
+}
+
+
+/* Team Section */
+.neon-team-section {
+  padding: 60px 20px;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.team-header h2 {
+  font-size: 2.8rem;
+  color: #f0f0f0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.team-header p {
+  font-size: 1rem;
+  color: #999;
+  margin-bottom: 40px;
+}
+
+/* Team Container */
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* Individual Team Member */
+.team-member {
+  width: calc(25% - 40px);
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+.team-member:hover {
+  transform: scale(1.05);
+}
+
+/* Neon Glow Frame */
+.glow-frame {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 0 15px #4efeff, 0 0 30px #4efeff, 0 0 60px rgba(78, 255, 255, 0.7);
+}
+
+.glow-frame img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #4efeff;
+}
+
+/* Member Name */
+.team-member h3 {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/* Member Role */
+.team-member p {
+  font-size: 1rem;
+  color: #4efeff;
+  font-style: italic;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .team-member {
+      width: calc(33.333% - 40px);
+  }
+}
+
+@media (max-width: 768px) {
+  .team-member {
+      width: calc(50% - 40px);
+  }
+}
+
+@media (max-width: 480px) {
+  .team-member {
+      width: 100%;
+  }
+}
+
+/* General Footer Styling */
+footer {
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  backdrop-filter: blur(1px); /* Creates the blurred background effect */
+  padding: 50px 20px;
+  color: white;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* Contact Info Styling */
+.contact-info {
+  flex: 1;
+  min-width: 250px;
+}
+
+.contact-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info li {
+  margin-bottom: 10px;
+}
+
+.contact-info li strong {
+  font-weight: bold;
+}
+
+/* Social Media Styling */
+.social-media {
+  flex: 1;
+  min-width: 250px;
+}
+
+.social-media h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.social-media ul {
+  list-style: none;
+  padding: 0;
+}
+
+.social-media li {
+  margin-bottom: 10px;
+}
+
+.social-media a {
+  text-decoration: none;
+  color: #4efeff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #fff;
+}
+
+/* Contact Form Styling */
+.contact-form {
+  flex: 1;
+  min-width: 250px;
+}
+
+.contact-form h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.contact-form input, .contact-form textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background-color: #4efeff;
+  color: white;
+  padding: 12px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #00b8d4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info, .social-media, .contact-form {
+    min-width: 100%;
+  }
+}
+
+/* General Body & Navbar Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+nav{
+position:fixed;
+    padding: 10px 30px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: none;
+    position: relative;
+    height: 70px;
+}
+
+.logo{
+    color: #fff;
+}
+
+nav ul{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+nav ul li{
+    list-style-type: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu-icon, .bar{
+    display: none;
+  display: flex;
+  flex-direction: column;
+  cursor:pointer;
+}
+
+@media (max-width:600px) {
+    nav ul{
+        position: absolute;
+        top: 100px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        text-align: center;
+        color:#fff;
+        background: none;
+        gap: 0;
+        overflow: hidden;
+
+        list-style: none; /* Remove default list style */
+        display: flex; /* Align items horizontally */
+        gap: 15px; /* Space between items */
+        padding: 0; /* Remove default padding */
+        margin: 0; /* Remove default margin */
+    }
+
+    nav ul li {
+        border-radius: 15px; /* Rounded corners */
+        background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+        backdrop-filter: blur(5px); /* Enhanced blur for a better glassmorphic effect */
+        padding: 10px 20px; /* More generous padding */
+        color: white; /* White text */
+        font-size: 16px; /* Increase font size for better readability */
+        font-weight: bold; /* Bold text for emphasis */
+        cursor: pointer; /* Pointer cursor on hover */
+        transition: all 0.3s ease; /* Smooth transition for hover effects */
+        text-align: center; /* Center-align text */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Add a soft shadow */
+    }
+
+    nav ul li:hover {
+        background: rgba(255, 255, 255, 0.2); /* Lighter semi-transparent hover effect */
+        transform: scale(1.1); /* Slight enlargement on hover */
+        box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.4); /* More pronounced shadow */
+    }
+
+    .menu-icon, .bar {
+        display: block; /* Make it visible (if applicable) */
+    }
+
+    #menuList {
+        transition: all 0.5s ease; /* Smooth transition for menu toggle */
+    }
+}
+
+.bg-image {
+background: url('https://t4.ftcdn.net/jpg/05/49/86/39/360_F_549863991_6yPKI08MG7JiZX83tMHlhDtd6XLFAMce.jpg') no-repeat center center/cover;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index:-1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.hero-content .hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.hero-content .hero-buttons a {
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    background: #4efeff;
+    color: #000;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content .hero-buttons a:hover {
+    background: #ff4e4e;
+    color: #fff;
+    transform: scale(1.1);
+}
